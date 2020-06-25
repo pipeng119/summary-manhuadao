@@ -16,6 +16,7 @@ module.exports = {
             .set('@', resolve('src'))
             .set('assets', resolve('src/assets'))
             .set('components', resolve('src/components'))
+            .set('styles', resolve('src/styles'))
     },
     css: {
         loaderOptions: {
@@ -28,7 +29,7 @@ module.exports = {
                         // 'border-radius-base': '2px',
                     },
                     javascriptEnabled: true,
-                },
+                }
             }
         }
     }

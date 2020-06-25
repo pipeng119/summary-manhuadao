@@ -1,0 +1,120 @@
+@import '~@/styles/common/_mixins.styl'
+@import '~@/styles/common/_variables.styl'
+
+.home
+    &-header
+        position fixed
+        top 0
+        left 0
+        z-index 1
+        display flex
+        align-items center
+        justify-content space-between
+        width 100%
+        background #fff
+        height 90px
+        padding 0 15px
+
+        &-login
+            homeBgIcon(50px, 50px, '~assets/images/login.png')
+
+        &-title
+            homeBgIcon(186px, 56px, '~assets/images/logo.png')
+
+        &-search
+            homeBgIcon(50px, 50px, '~assets/images/search.png')
+
+    &-banner
+        position relative
+
+        & /deep/ .ant-carousel .slick-slide
+            text-align center
+            height 360px
+            // line-height 160px
+            overflow hidden
+
+            img
+                width 100%
+                height 100%
+
+    &-nav
+        display flex
+        align-items center
+        justify-content space-around
+        height 200px
+
+        &-item
+            display flex
+            flex-direction column
+            justify-content center
+            align-items center
+
+            span
+                width 110px
+                height 110px
+                background-size contain
+
+            p
+                color fontColor
+                font-weight 500
+                margin-top 10px
+
+    &-recommend
+        width 750px
+
+        &-divide
+            width inherit
+            height 20px
+            background #f4f4f4
+
+        &-title
+            display flex
+            align-items center
+            justify-content center
+            position relative
+            width inherit
+            height 50px
+            margin-top 46px
+            margin-bottom 38px
+
+            &-group
+                display flex
+                align-items center
+
+                img
+                    width 44px
+                    height 44px
+                    margin-left 10px
+
+                span
+                    font-weight 500
+                    color #3a3a3a
+
+            &-more
+                position absolute
+                right 36px
+                top 10px
+                color #b0b0b0
+                font-weight 500
+
+        &-list
+            display flex
+            flex-wrap wrap
+            align-content center
+            justify-content: space-around  
+
+            &-item
+                width 346px
+                margin-bottom: 36px
+                img 
+                    width 100%
+                    height 346px
+                    margin-bottom 10px
+
+                h6
+                    margin-bottom: 6px
+
+                p
+                    color #8d8d8d
+                    font-weight: 500
+                    ellipsis()
