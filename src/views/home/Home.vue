@@ -40,6 +40,9 @@
         </li>
       </ul>
     </section>
+    <section class="go-top font-20" v-show="topFlag" @click="goTop()">
+      <div class="go-top-fav"></div>顶部
+    </section>
   </div>
 </template>
 
@@ -172,10 +175,29 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      topFlag: false
     };
   },
-  created() {}
+  methods: {
+    // 监听滚动条事件
+    handleScroll(e) {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= 360) {
+        if (this.topFlag) return;
+        if (!this.topFlag) this.topFlag = true;
+      } else {
+        this.topFlag = false;
+      }
+    },
+    goTop(){
+        document.documentElement.scrollTop = document.body.scrollTop = 0
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll, true);
+  }
 };
 </script>
 <style lang="stylus" scoped>
