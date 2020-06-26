@@ -1,0 +1,76 @@
+@import '~styles/common/_variables.styl'
+@import '~styles/common/_mixins.styl'
+
+.mine
+    width 100%
+    height 100%
+    background #f4f4f4
+    color #000
+
+    &-header
+        position relative
+        display flex
+        justify-content center
+        align-items center
+        height 90px
+        background mineBgColor
+
+        &-back
+            position absolute
+            width 46px
+            height 26px
+            top 44px
+            left 32px
+            backBtn()
+
+        span
+            font-weight 500
+            color #333
+
+    &-login
+        display flex
+        align-items center
+        padding 30px 40px
+        border-bottom 1px solid #dddde4
+        background mineBgColor
+
+        &-pic
+            width 130px
+            height 130px
+            background-image url('~assets/images/mine/login-pic.jpeg')
+            background-size contain
+            border 1px solid #efefef
+            border-radius 50%
+
+        &-btn
+            font-weight 500
+            margin-left 20px
+
+    &-menu
+        margin-top 20px
+        background mineBgColor
+
+        &-item
+            display flex
+            align-items center
+            height 90px
+            padding-left 30px
+
+            &-fav
+                width 36px
+                margin-right 30px
+
+            &-text
+                position relative
+                flex 1
+                color #000000
+                font-weight 500
+
+                &::after
+                    content ''
+                    position absolute
+                    top 3px
+                    right 20px
+                    width 15px
+                    height 28px
+                    background url('~assets/images/right-arrow.png')

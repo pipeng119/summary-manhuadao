@@ -1,0 +1,70 @@
+@import '~styles/common/_mixins.styl'
+
+.register
+    color #000
+
+    &-header
+        position relative
+        height 690px
+        padding-top 320px
+        background-image url('~assets/images/login/bg_01.png')
+        background-size cover
+
+        &-back
+            position absolute
+            width 46px
+            height 26px
+            top 22px
+            left 16px
+            backBtn()
+
+        &-pic
+            width 374px
+            height 368px
+            background-image url('~assets/images/login/bg_02.png')
+            margin 0 auto
+
+    &-form
+        margin 40px auto
+        padding 0 68px
+
+        &-group
+            position relative
+            display flex
+            align-items center
+            padding-bottom 10px
+            border-bottom 1px solid #ddd
+
+            label
+                font-weight 500
+
+            input
+                flex 1
+                color #000000
+                font-weight 500
+                border none
+
+        &-group+&-group
+            margin-top 60px
+
+        &-btn
+            width 614px
+            height 72px
+            background #ff4c17
+            border-radius 12px
+            color #ffffff
+            line-height 72px
+            text-align center
+            font-weight 400
+            margin-top 40px
+
+    &-footer
+        margin 0 auto
+        padding 0 64px
+
+        p
+            text-align: right
+            font-weight 400
+
+            a
+                color #5094f7

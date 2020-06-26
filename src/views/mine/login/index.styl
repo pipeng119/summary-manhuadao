@@ -1,0 +1,101 @@
+@import '~styles/common/_mixins.styl'
+
+.login
+    color #000
+
+    &-header
+        position relative
+        height 690px
+        padding-top 320px
+        background-image url('~assets/images/login/bg_01.png')
+        background-size cover
+
+        &-back
+            position absolute
+            width 46px
+            height 26px
+            top 44px
+            left 32px
+            backBtn()
+
+        &-register
+            position absolute
+            top 22px
+            right 22px
+            font-weight 500
+
+        &-pic
+            width 374px
+            height 368px
+            background-image url('~assets/images/login/bg_02.png')
+            margin 0 auto
+
+    &-form
+        margin 40px auto
+        padding 0 68px
+
+        &-group
+            position relative
+            display flex
+            align-items center
+            padding-bottom 10px
+            border-bottom 1px solid #ddd
+
+            label
+                font-weight 500
+
+            input
+                color #000000
+                font-weight 500
+                border none
+
+            &-forget
+                position absolute
+                right 0
+                color #5094f9
+                font-weight 400
+
+        &-group+&-group
+            margin-top 60px
+
+        &-btn
+            width 614px
+            height 72px
+            background #ff4c17
+            border-radius 12px
+            color #ffffff
+            line-height 72px
+            text-align center
+            font-weight 400
+            margin-top 40px
+
+    &-footer
+        margin 0 auto
+        padding 0 64px
+
+        p
+            display flex
+            align-items center
+
+            span:nth-child(2)
+                font-weight: 500
+
+            span:not(:nth-child(2))
+                flex 1
+                height 1px
+                background-color #ddd
+
+        &-other
+            display flex
+            align-items center
+            justify-content space-around
+            padding 29px 80px 0
+
+            span
+                width 86px
+                height 86px
+
+            &-qq
+                background: url('~assets/images/login/qq.png')
+            &-weibo
+                background: url('~assets/images/login/weibo.png')

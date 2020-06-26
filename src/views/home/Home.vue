@@ -2,7 +2,7 @@
   <div class="home">
     <!-- 头部 -->
     <header class="home-header">
-      <span class="home-header-login"></span>
+      <router-link class="home-header-login" to="mine"></router-link>
       <div class="home-header-title"></div>
       <a class="home-header-search"></a>
     </header>
@@ -22,7 +22,7 @@
       </div>
     </nav>
     <!-- 推荐列表 -->
-    <section class="home-recommend" v-for="recommend in recommendList" :key="recommend.title">
+    <section class="home-recommend" v-for="recommend in recommendList" :key="recommend.id">
       <div class="home-recommend-divide"></div>
       <div class="home-recommend-title">
         <div class="home-recommend-title-group">
@@ -89,6 +89,7 @@ export default {
       ],
       recommendList: [
         {
+          id: 1,
           title: "燃烧吧热血",
           imgUrl: require("assets/images/home/blood.png"),
           moreUrl: "http://baidu.com",
@@ -116,6 +117,7 @@ export default {
           ]
         },
         {
+          id: 2,
           title: "燃烧吧热血",
           imgUrl: require("assets/images/home/blood.png"),
           moreUrl: "http://baidu.com",
@@ -143,6 +145,7 @@ export default {
           ]
         },
         {
+          id: 3,
           title: "燃烧吧热血",
           imgUrl: require("assets/images/home/blood.png"),
           moreUrl: "http://baidu.com",
