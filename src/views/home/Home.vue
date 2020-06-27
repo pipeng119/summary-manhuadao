@@ -16,7 +16,7 @@
     </section>
     <!-- 导航 -->
     <nav class="home-nav">
-      <div class="home-nav-item" v-for="item in navList" :key="item.imgUrl">
+      <div class="home-nav-item" v-for="item in navList" :key="item.imgUrl" @click="jumpByLink(item.target)">
         <span :style="{backgroundImage: `url(${item.imgUrl})`}"></span>
         <p>{{item.label}}</p>
       </div>
@@ -75,19 +75,23 @@ export default {
       navList: [
         {
           imgUrl: require("@/assets/images/catgory.png"),
-          label: "分类"
+          label: "分类",
+          target: '/category'
         },
         {
           imgUrl: require("@/assets/images/ranking.png"),
-          label: "排行"
+          label: "排行",
+          target: '/category'
         },
         {
           imgUrl: require("@/assets/images/vip.png"),
-          label: "VIP专区"
+          label: "VIP专区",
+          target: '/category'
         },
         {
           imgUrl: require("@/assets/images/history.png"),
-          label: "历史"
+          label: "历史",
+          target: '/category'
         }
       ],
       recommendList: [
@@ -193,6 +197,10 @@ export default {
     },
     goTop(){
         document.documentElement.scrollTop = document.body.scrollTop = 0
+    },
+    jumpByLink(url){
+      console.log(url)
+      this.$router.push(url)
     }
   },
   mounted() {

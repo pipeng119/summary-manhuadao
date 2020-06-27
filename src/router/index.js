@@ -5,6 +5,7 @@ import Mine from '@/views/mine/Mine.vue'
 import Login from '@/views/mine/login/Login.vue'
 import Register from '@/views/mine/register/Register.vue'
 import Forget from '@/views/mine/forget/Forget.vue'
+import Category from '@/views/category/Category.vue'
 import loadon from '@/service/loadon'
 
 Vue.use(VueRouter)
@@ -36,6 +37,11 @@ const routes = [{
     path: '/forget',
     name: 'Forget',
     component: Forget
+  },
+  {
+    path: '/category',
+    name: 'Category',
+    component: Category
   },
 ]
 
