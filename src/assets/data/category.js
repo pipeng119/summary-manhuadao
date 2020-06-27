@@ -1,4 +1,4 @@
-export const navList = [{
+export const categoryNavList = [{
         label: "热血",
         type: "blood"
     },

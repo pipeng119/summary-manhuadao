@@ -1,7 +1,7 @@
 <template>
-  <div class="category">
+  <div class="showcase">
     <CommonHeader :headerParams="headerParams" />
-    <CommonNav :navList="navList" @type="getType($event)" />
+    <CommonNav :navList="categoryNavList" @type="getType($event)" />
     <BookList :list="categoryList" />
   </div>
 </template>
@@ -9,9 +9,9 @@
 import CommonHeader from "components/commonHeader/CommonHeader.vue";
 import BookList from "components/bookList/BookList.vue";
 import CommonNav from "components/commonNav/CommonNav.vue";
-import { navList, categoryList } from "assets/data/category";
+import { categoryNavList, categoryList } from "assets/data/category";
 export default {
-  name: "Category",
+  name: "showcase",
   data() {
     return {
       headerParams: {
@@ -20,7 +20,7 @@ export default {
         title: "分类",
         searchType: "dark"
       },
-      navList,
+      categoryNavList,
       categoryList
     };
   },
@@ -33,6 +33,9 @@ export default {
     getType(item) {
       console.log(item);
     }
+  },
+  created() {
+    console.log(this.$route.params);
   }
 };
 </script>

@@ -19,22 +19,22 @@ export const bannerList = [{
 export const navList = [{
         imgUrl: require("@/assets/images/catgory.png"),
         label: "分类",
-        target: '/category'
+        target: '/showcase/category'
     },
     {
         imgUrl: require("@/assets/images/ranking.png"),
         label: "排行",
-        target: '/category'
+        target: '/showcase/ranking'
     },
     {
         imgUrl: require("@/assets/images/vip.png"),
         label: "VIP专区",
-        target: '/category'
+        target: '/showcase/vip'
     },
     {
         imgUrl: require("@/assets/images/history.png"),
         label: "历史",
-        target: '/category'
+        target: '/history'
     }
 ]
 
