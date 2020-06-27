@@ -6,6 +6,9 @@ import Login from '@/views/mine/login/Login.vue'
 import Register from '@/views/mine/register/Register.vue'
 import Forget from '@/views/mine/forget/Forget.vue'
 import Showcase from '@/views/showcase/Showcase.vue'
+import History from '@/views/history/History.vue'
+import Default from '@/views/history/default/Default.vue'
+import Favorite from '@/views/history/favorite/Favorite.vue'
 import loadon from '@/service/loadon'
 
 Vue.use(VueRouter)
@@ -42,7 +45,23 @@ const routes = [{
     path: '/showcase/:type',
     name: 'Showcase',
     component: Showcase
-  }
+  },
+  {
+    path: '/history',
+    name: 'History',
+    component: History,
+    children: [{
+        path: 'default',
+        name: 'Default',
+        component: Default,
+      },
+      {
+        path: 'favorite',
+        name: 'Favorite',
+        component: Favorite,
+      },
+    ]
+  },
 ]
 
 const router = new VueRouter({
