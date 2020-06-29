@@ -4,7 +4,7 @@
     <header class="home-header">
       <router-link class="home-header-login" to="mine"></router-link>
       <div class="home-header-title"></div>
-      <a class="home-header-search"></a>
+      <router-link class="home-header-search" to="/explore"></router-link>
     </header>
     <!-- 轮播图 -->
     <section class="home-banner">

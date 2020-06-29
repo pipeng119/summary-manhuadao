@@ -7,8 +7,7 @@ import Register from '@/views/mine/register/Register.vue'
 import Forget from '@/views/mine/forget/Forget.vue'
 import Showcase from '@/views/showcase/Showcase.vue'
 import History from '@/views/history/History.vue'
-import Default from '@/views/history/default/Default.vue'
-import Favorite from '@/views/history/favorite/Favorite.vue'
+import Explore from '@/views/explore/Explore.vue'
 import loadon from '@/service/loadon'
 
 Vue.use(VueRouter)
@@ -50,6 +49,11 @@ const routes = [{
     path: '/history',
     name: 'History',
     component: History,
+  },
+  {
+    path: '/explore',
+    name: 'Explore',
+    component: Explore,
   },
 ]
 
