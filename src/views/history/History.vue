@@ -14,6 +14,7 @@
           @click="chagneStatus(0)"
         >历史</span>
       </div>
+      <span class="history-nav-del" v-show="!flag"></span>
     </nav>
     <Default v-show="!flag" :list="historyList" />
     <Favorite v-show="flag" />
