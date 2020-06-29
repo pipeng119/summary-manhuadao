@@ -22,30 +22,6 @@ export const categoryNavList = [{
         label: "少儿",
         type: "child"
     }
-    // {
-    //   label: '热搜榜',
-    //   type: 'hoot'
-    // },
-    // {
-    //   label: '人气榜',
-    //   type: 'fans'
-    // },
-    // {
-    //   label: '畅销榜',
-    //   type: 'boom'
-    // },
-    // {
-    //   label: '新书榜',
-    //   type: 'new'
-    // },
-    // {
-    //   label: '完结榜',
-    //   type: 'finished'
-    // },
-    // {
-    //   label: '免费榜',
-    //   type: 'free'
-    // },
 ]
 
 export const categoryList = [{

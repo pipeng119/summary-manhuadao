@@ -27,39 +27,32 @@
             justify-content space-between
             max-width 70%
             margin 0 0 0 20px
-            color #999
+            color #666
+            font-weight 400
 
             &-title
                 color #333
                 font-weight 500
                 ellipsis()
 
-        &-sort
-            width 99px
-            height 56px
-            margin auto
-            position absolute
-            top 0
-            right 40px
-            bottom 0
-
-        .first
-            background url('~assets/images/ranking/sort_01.png')
-
-        .second
-            background url('~assets/images/ranking/sort_02.png')
-
-        .third
-            background url('~assets/images/ranking/sort_03.png')
-
-        .others
+        &-btn
             display flex
-            align-items center
             justify-content center
-            width 52px
-            height 50px
-            right 60px
-            background url('~assets/images/ranking/sort_04.png')
+            align-items center
+            width 140px
+            height 60px
+            border 1px solid #e7370c
+            border-radius 6px
+
+            &-icon
+                width 24px
+                height 30px
+                margin 0 12px 0 0
+                background url('~assets/images/keep.png')
+                background-size contain
+
+            &-text
+                color #e7370c
 
     &-item:last-child
         border-bottom 1px solid #ddd

@@ -15,18 +15,20 @@
         >历史</span>
       </div>
     </nav>
-    <Default v-show="!flag" />
+    <Default v-show="!flag" :list="historyList" />
     <Favorite v-show="flag" />
   </div>
 </template>
 <script>
 import Default from "./default/Default.vue";
 import Favorite from "./favorite/Favorite.vue";
+import { historyList } from "assets/data/history";
 export default {
   data() {
     return {
       activeFlag: 0,
-      flag: 0
+      flag: 0,
+      historyList
     };
   },
   components: {
