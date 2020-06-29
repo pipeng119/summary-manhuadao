@@ -15,9 +15,13 @@
 export default {
   name: "Default",
   data() {
-    return {
-      list: []
-    };
+    return {};
+  },
+  props: {
+    list: {
+      type: Array,
+      default: () => []
+    }
   },
   created() {}
 };

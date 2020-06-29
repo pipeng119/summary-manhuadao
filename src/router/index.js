@@ -50,17 +50,6 @@ const routes = [{
     path: '/history',
     name: 'History',
     component: History,
-    children: [{
-        path: 'default',
-        name: 'Default',
-        component: Default,
-      },
-      {
-        path: 'favorite',
-        name: 'Favorite',
-        component: Favorite,
-      },
-    ]
   },
 ]
 

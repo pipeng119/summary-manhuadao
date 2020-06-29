@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite"></div>
+  <div class="favorite">收藏</div>
 </template>
 <script>
 export default {

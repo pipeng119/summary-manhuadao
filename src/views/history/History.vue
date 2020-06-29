@@ -5,20 +5,23 @@
       <div class="history-nav-tabs">
         <span
           class="history-nav-tabs-item font-34"
-          :class="{'active':flag === 1}"
-          @click="chagneStatus('/history/favorite',1)"
+          :class="{'active':flag}"
+          @click="chagneStatus(1)"
         >收藏</span>
         <span
           class="history-nav-tabs-item font-34"
-          :class="{'active':flag === 0}"
-          @click="chagneStatus('/history/default',0)"
+          :class="{'active':!flag}"
+          @click="chagneStatus(0)"
         >历史</span>
       </div>
     </nav>
-    <router-view></router-view>
+    <Default v-show="!flag" />
+    <Favorite v-show="flag" />
   </div>
 </template>
 <script>
+import Default from "./default/Default.vue";
+import Favorite from "./favorite/Favorite.vue";
 export default {
   data() {
     return {
@@ -26,11 +29,13 @@ export default {
       flag: 0
     };
   },
+  components: {
+    Default,
+    Favorite
+  },
   methods: {
-    chagneStatus(url, flag) {
-      this.$router.push(url);
+    chagneStatus(flag) {
       this.flag = flag;
-      //   this.activeFlag = flag;
     }
   }
 };
