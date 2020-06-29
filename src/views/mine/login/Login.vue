@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <header class="login-header">
-      <span class="login-header-back" @click="$router.go(-1);"></span>
+      <GoBack />
       <router-link class="login-header-register font-30" to="/register">注册</router-link>
       <div class="login-header-pic"></div>
     </header>
@@ -31,12 +31,14 @@
   </div>
 </template>
 <script>
+import GoBack from "components/goBack/GoBack.vue";
 export default {
   name: "Login",
   data() {
     return {};
   },
-  methods: {
+  components: {
+    GoBack
   }
 };
 </script>

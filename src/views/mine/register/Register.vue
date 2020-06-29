@@ -1,19 +1,21 @@
 <template>
   <div class="register">
     <header class="register-header">
-      <span class="register-header-back" @click="$router.go(-1);"></span>
+      <GoBack />
       <div class="register-header-pic"></div>
     </header>
     <section class="register-form">
       <div class="register-form-group">
         <label>
-          邮<span style="color:#fff">邮箱</span>箱：
+          邮
+          <span style="color:#fff">邮箱</span>箱：
         </label>
         <input type="text" placeholder="请输入您的邮箱" />
       </div>
       <div class="register-form-group">
         <label>
-          密<span style="color:#fff">密码</span>码：
+          密
+          <span style="color:#fff">密码</span>码：
         </label>
         <input type="password" placeholder="请设置6-16位的字母、数字、符号的密码" />
       </div>
@@ -32,12 +34,15 @@
   </div>
 </template>
 <script>
+import GoBack from "components/goBack/GoBack.vue";
 export default {
   name: "register",
   data() {
     return {};
   },
-  methods: {}
+  components: {
+    GoBack
+  }
 };
 </script>
 <style lang="stylus" scoped>

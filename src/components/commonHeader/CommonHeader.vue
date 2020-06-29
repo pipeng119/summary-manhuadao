@@ -1,6 +1,6 @@
 <template>
   <header class="common-header">
-    <span class="common-header-back" @click="goBack()"></span>
+    <GoBack />
     <div
       class="font-32"
       :class="{'common-header-bg': headerParams.bgUrl,'common-header-title': !headerParams.bgUrl}"
@@ -9,9 +9,13 @@
   </header>
 </template>
 <script>
+import GoBack from "components/goBack/GoBack.vue";
 export default {
   data() {
     return {};
+  },
+  components: {
+    GoBack
   },
   props: {
     headerParams: {
@@ -36,11 +40,7 @@ export default {
         : "common-header-search-dark";
     }
   },
-  methods: {
-    goBack() {
-      this.$router.go(-1);
-    }
-  }
+  methods: {}
 };
 </script>
 <style lang="stylus" scoped>

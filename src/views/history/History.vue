@@ -1,7 +1,7 @@
 <template>
   <div class="history">
     <nav class="history-nav">
-      <span class="history-nav-back" @click="$router.go(-1)"></span>
+      <GoBack />
       <div class="history-nav-tabs">
         <span
           class="history-nav-tabs-item font-34"
@@ -23,6 +23,7 @@
 <script>
 import Default from "./default/Default.vue";
 import Favorite from "./favorite/Favorite.vue";
+import GoBack from "components/goBack/GoBack.vue";
 import { historyList } from "assets/data/history";
 export default {
   data() {
@@ -34,7 +35,8 @@ export default {
   },
   components: {
     Default,
-    Favorite
+    Favorite,
+    GoBack
   },
   methods: {
     chagneStatus(flag) {

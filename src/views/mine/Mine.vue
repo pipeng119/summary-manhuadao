@@ -1,7 +1,7 @@
 <template>
   <div class="mine">
     <header class="mine-header">
-      <router-link class="mine-header-back" to="/"></router-link>
+      <GoBack />
       <span class="font-32">我的</span>
     </header>
     <section class="mine-login">
@@ -10,7 +10,10 @@
     </section>
     <section class="mine-menu">
       <router-link class="mine-menu-item" v-for="item in menu" :key="item.text" :to="item.url">
-        <span class="mine-menu-item-fav" :style="{backgroundImage: `url(${item.fav})`,height: item.height}"></span>
+        <span
+          class="mine-menu-item-fav"
+          :style="{backgroundImage: `url(${item.fav})`,height: item.height}"
+        ></span>
         <span class="mine-menu-item-text font-30">{{item.text}}</span>
       </router-link>
     </section>
@@ -18,6 +21,7 @@
   </div>
 </template>
 <script>
+import GoBack from "components/goBack/GoBack.vue";
 export default {
   name: "Mine",
   data() {
@@ -49,6 +53,9 @@ export default {
         }
       ])
     };
+  },
+  components: {
+    GoBack
   }
 };
 </script>
