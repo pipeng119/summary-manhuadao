@@ -1,8 +1,11 @@
 <template>
   <div class="explore">
     <header class="explore-header">
-      <span class="explore-header-back"></span>
-      <input class="explore-header-input" type="text" placeholder="漫画名 | 作者 ^_^" />
+      <GoBack :isWhite="isWhite" />
+      <div class="explore-header-search">
+        <span class="explore-header-search-icon"></span>
+        <input class="explore-header-search-input font-24" type="text" placeholder="漫画名 | 作者 ^_^" />
+      </div>
       <span class="explore-header-btn" @click="search()">探索</span>
     </header>
     <section class="explore-recommend">
@@ -24,12 +27,17 @@
   </div>
 </template>
 <script>
+import GoBack from "components/goBack/GoBack.vue";
 export default {
   name: "explore",
   data() {
     return {
+      isWhite: true,
       recommendList: []
     };
+  },
+  components: {
+    GoBack
   },
   methods: {
     search() {
