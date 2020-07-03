@@ -38,7 +38,12 @@
         <span class="home-recommend-title-more">更多 ></span>
       </div>
       <ul class="home-recommend-list">
-        <li class="home-recommend-list-item" v-for="item in recommend.list" :key="item.title">
+        <li
+          class="home-recommend-list-item"
+          v-for="item in recommend.list"
+          :key="item.title"
+          @click="goDetail(item)"
+        >
           <img :src="item.imgUrl" alt />
           <h6 class="font-28">{{item.title}}</h6>
           <p>{{item.desc}}</p>
@@ -84,6 +89,10 @@ export default {
     jumpByLink(url) {
       console.log(url);
       this.$router.push(url);
+    },
+    goDetail(item) {
+      console.log(item);
+      this.$router.push("/detail");
     }
   },
   mounted() {

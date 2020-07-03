@@ -8,6 +8,7 @@ import Forget from '@/views/mine/forget/Forget.vue'
 import Showcase from '@/views/showcase/Showcase.vue'
 import History from '@/views/history/History.vue'
 import Explore from '@/views/explore/Explore.vue'
+import Detail from '@/views/detail/Detail.vue'
 import loadon from '@/service/loadon'
 
 Vue.use(VueRouter)
@@ -54,6 +55,11 @@ const routes = [{
     path: '/explore',
     name: 'Explore',
     component: Explore,
+  },
+  {
+    path: '/detail',
+    name: 'Detail',
+    component: Detail,
   },
 ]
 
