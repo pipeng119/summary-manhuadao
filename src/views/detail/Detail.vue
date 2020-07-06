@@ -20,11 +20,20 @@
       </div>
     </div>
     <div class="detail-tab font-28">
-      <span class="detail-tab-item">简介</span>
-      <span class="detail-tab-item active">目录</span>
-      <span class="detail-tab-item">评论(626)</span>
+      <span class="detail-tab-item" :class="{active: flag === 0}" @click="changeTab(0)">简介</span>
+      <span class="detail-tab-item" :class="{active: flag === 1}" @click="changeTab(1)">目录</span>
+      <span class="detail-tab-item" :class="{active: flag === 2}" @click="changeTab(2)">评论(626)</span>
     </div>
-    <div class="detail-list">
+    <div class="detail-intro" v-show="flag === 0">
+      <p
+        class="detail-intro-desc font-26"
+      >主人公周元，为周朝皇子天生圣龙气运。因一道预言，气运被夺身中剧毒，经脉被锁无法修炼。背负国仇家恨，周元没有被这种困境摧</p>
+      <div class="detail-intro-introduce">
+        <p class="detail-intro-author font-28">作者：天蚕土豆</p>
+        <p class="font-28">连载中 |</p>
+      </div>
+    </div>
+    <div class="detail-list" v-show="flag === 1">
       <div class="detail-list-title">
         <p class="detail-list-title-text">
           <span class="font-28">目录</span>
@@ -42,10 +51,13 @@
         </li>
       </ul>
     </div>
+    <Comment v-show="flag === 2" />
   </div>
 </template>
 <script>
 import GoBack from "components/goBack/GoBack";
+import Comment from "components/comment/Comment";
+
 export default {
   name: "Detail",
   data() {
@@ -80,11 +92,18 @@ export default {
           name: "第01话周家圣龙 1",
           isVIP: true
         }
-      ]
+      ],
+      flag: 2
     };
   },
   components: {
-    GoBack
+    GoBack,
+    Comment
+  },
+  methods: {
+    changeTab(num) {
+      this.flag = num;
+    }
   }
 };
 </script>
