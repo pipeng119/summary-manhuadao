@@ -1,7 +1,7 @@
 <template>
   <div class="showcase">
     <CommonHeader :headerParams="headerParams" />
-    <CommonNav v-if="bookList.length > 0" :navList="navList" @type="getType($event)" />
+    <CommonNav v-if="navList" :navList="navList" @type="getType($event)" />
     <BookList :list="bookList" :showType="type" />
   </div>
 </template>
@@ -38,6 +38,7 @@ export default {
   },
   created() {
     this.type = this.$route.params.type;
+    let { title } = this.$route.params;
     switch (this.type) {
       case "category":
         this.headerParams.title = "分类";
@@ -51,9 +52,14 @@ export default {
         break;
       case "vip":
         this.headerParams.title = "vip专区";
-        this.categoryNavList = [];
+        this.navList = [];
         this.bookList = categoryList;
         break;
+      case "more":
+        // 更多页面 复用本组件 后续修改成向后台请求数据
+        this.headerParams.title = title;
+        this.navList = [];
+        this.bookList = categoryList;
     }
   }
 };

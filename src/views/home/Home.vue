@@ -35,7 +35,10 @@
           <span class="font-36">{{recommend.title}}</span>
         </div>
         <router-link :to="recommend.moreUrl"></router-link>
-        <span class="home-recommend-title-more">更多 ></span>
+        <span
+          class="home-recommend-title-more"
+          @click="$router.push(`/showCase/more/${recommend.title}`)"
+        >更多 ></span>
       </div>
       <ul class="home-recommend-list">
         <li

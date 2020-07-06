@@ -42,7 +42,7 @@ const routes = [{
     component: Forget
   },
   {
-    path: '/showcase/:type',
+    path: '/showcase/:type/:title',
     name: 'Showcase',
     component: Showcase
   },
